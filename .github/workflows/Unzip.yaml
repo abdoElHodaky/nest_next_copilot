@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Unzip file
-        run: >
-          chmod 777 files.zip && \
-          unzip files.zip -d ./
+        run: |
+          ls -la
+          unzip files.zip -d .
           
       -  name: Commit and Push
          uses: GuillaumeFalourd/git-commit-push@v1.3
