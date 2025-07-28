@@ -9,8 +9,9 @@ jobs:
     steps:
       - name: Unzip file
         run: >
-          unzip files.zip -d ./
-          rm -rf files.zip
+          chmod 777 files.zip
+          unzip files -d ./
+          
       -  name: Commit and Push
          uses: GuillaumeFalourd/git-commit-push@v1.3
          with:
